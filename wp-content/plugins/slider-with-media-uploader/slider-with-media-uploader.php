@@ -68,31 +68,31 @@ class SliderWithMedaiUploader
     <div class="carousel-item">
     <img src="' . get_option('wcp_image2') . '" class="d-block w-100" alt="img2">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>' . esc_html(get_option('wcp_caption2', 'First slide label')) . '</h5>
+        <p>' . esc_html(get_option('wcp_subcaption2', 'First slide label')) . '</p>
       </div>
     </div>
     <div class="carousel-item">
     <img src="' . get_option('wcp_image3') . '" class="d-block w-100" alt="img3">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>' . esc_html(get_option('wcp_caption3', 'First slide label')) . '</h5>
+        <p>' . esc_html(get_option('wcp_subcaption3', 'First slide label')) . '</p>
       </div>
     </div>
 
     <div class="carousel-item">
     <img src="' . get_option('wcp_image4') . '" class="d-block w-100" alt="img4">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>' . esc_html(get_option('wcp_caption4', 'First slide label')) . '</h5>
+        <p>' . esc_html(get_option('wcp_subcaption4', 'First slide label')) . '</p>
       </div>
     </div>
 
     <div class="carousel-item">
     <img src="' . get_option('wcp_image5') . '" class="d-block w-100" alt="img5">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>' . esc_html(get_option('wcp_caption5', 'First slide label')) . '</h5>
+        <p>' . esc_html(get_option('wcp_subcaption5', 'First slide label')) . '</p>
       </div>
     </div>
   </div>
@@ -142,11 +142,43 @@ class SliderWithMedaiUploader
 
     // Caption Heading 1
     add_settings_field('wcp_caption1', 'Image 1 Caption Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_caption1'));
-    register_setting('sliderplugin', 'wcp_caption1', array('sanitize_callback' => 'sanitize_text_field', 'default' => 'Your Caption Here'));
+    register_setting('sliderplugin', 'wcp_caption1', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
 
     // Caption Sub Heading 1
     add_settings_field('wcp_subcaption1', 'Image 1 Caption Sub Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_subcaption1'));
-    register_setting('sliderplugin', 'wcp_subcaption1', array('sanitize_callback' => 'sanitize_text_field', 'default' => 'Your Sub Caption Here'));
+    register_setting('sliderplugin', 'wcp_subcaption1', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Heading 2
+    add_settings_field('wcp_caption2', 'Image 2 Caption Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_caption2'));
+    register_setting('sliderplugin', 'wcp_caption2', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Sub Heading 2
+    add_settings_field('wcp_subcaption2', 'Image 2 Caption Sub Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_subcaption2'));
+    register_setting('sliderplugin', 'wcp_subcaption2', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Heading 3
+    add_settings_field('wcp_caption3', 'Image 3 Caption Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_caption3'));
+    register_setting('sliderplugin', 'wcp_caption3', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Sub Heading 3
+    add_settings_field('wcp_subcaption3', 'Image 3 Caption Sub Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_subcaption3'));
+    register_setting('sliderplugin', 'wcp_subcaption3', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Heading 4
+    add_settings_field('wcp_caption4', 'Image 4 Caption Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_caption4'));
+    register_setting('sliderplugin', 'wcp_caption4', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Sub Heading 4
+    add_settings_field('wcp_subcaption4', 'Image 4 Caption Sub Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_subcaption4'));
+    register_setting('sliderplugin', 'wcp_subcaption4', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Heading 5
+    add_settings_field('wcp_caption5', 'Image 5 Caption Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_caption5'));
+    register_setting('sliderplugin', 'wcp_caption5', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
+
+    // Caption Sub Heading 5
+    add_settings_field('wcp_subcaption5', 'Image 5 Caption Sub Heading', array($this, 'captionHTML'), 'img-slider-settings-page', 'wcp_first_section', array('caption' => 'wcp_subcaption5'));
+    register_setting('sliderplugin', 'wcp_subcaption5', array('sanitize_callback' => 'sanitize_text_field', 'default' => ''));
   }
 
   // Caption HTML
@@ -162,10 +194,6 @@ class SliderWithMedaiUploader
     <img class="<?php echo $arg['previewimgClass'] ?>" src="<?php echo get_option($arg['imgName']) ?>" width="100" height="100">
     <input type="hidden" class="image-upload" size="100" name="<?php echo $arg['imgName'] ?>" value="<?php echo esc_attr(get_option($arg['imgName'])) ?>">
     <br>
-    <input type="radio" id="display1" name="display" value="1">
-    <label for="display1">yes</label>
-    <input type="radio" id="display2" name="display" value="2">
-    <label for="display2">no</label><br>
     <button type="button" value="" class="<?php echo $arg['previewimgClass'] ?>"> Select Image </button>
  
   <?php }
