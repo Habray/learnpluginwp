@@ -1,0 +1,11 @@
+{
+    "name": "nerd_platoon/lesson9",
+    "description": "This is lesson 9",
+    "type": "project",
+    "license": "GPL",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\":"./inc"}
+    }
+}
