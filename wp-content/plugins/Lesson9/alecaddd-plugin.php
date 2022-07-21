@@ -2,6 +2,10 @@
 /**
  * @package  AlecadddPlugin
  */
+
+use Inc\Base\Activate;
+use Inc\Base\Deactivate;
+
 /*
 Plugin Name: Alecaddd Plugin
 Plugin URI: http://alecaddd.com/plugin
@@ -43,6 +47,20 @@ define('PLUGIN_PATH', plugin_dir_path( __FILE__ ));
 // for our custom sytle
 define('PLUGIN_URL', plugin_dir_url(__FILE__));
 
+// for basename
+define('PLUGIN', plugin_basename( __FILE__ ));
+
+// WP Activation and Deactivation need to be outside any class
+function activate_alecaddd_plugin(){
+	Activate::activate();
+}
+function deactivate_alecaddd_plugin()
+{
+	Deactivate::deactivate();
+}
+
+register_activation_hook(__FILE__, 'activate_alecaddd_plugin');
+register_deactivation_hook(__FILE__, 'activate_alecaddd_plugin');
 if(class_exists('Inc\\Init')){
 	Inc\Init::register_services();
 }
