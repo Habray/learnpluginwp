@@ -1,0 +1,159 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+/* Remove extra hide from top of the metabox body */
+#post-body #normal-sortables {
+    min-height: 0px;
+}
+
+/* Disable dragging of meta boxes */
+.wpgp--metabox-options#_wpgp_page_options .ui-sortable-handle {
+    pointer-events: none;
+}
+.wpgp--metabox-options#_wpgp_page_options button.handlediv {
+    display: none;
+}
+
+/* Metabox Heading Styel */
+.wpgp--metabox-options#_wpgp_page_options h2.hndle.ui-sortable-handle {
+    font-size: 32px;
+    padding-top: 35px;
+    background: #DC0251;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 70px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    justify-content: center;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+/* Nav */
+.wpgp--metabox-options#_wpgp_page_options .wpgp-nav {
+    width: 100%;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-nav ul {
+    margin-top: -33px;
+    background: #fff;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 7px -3px;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-theme-light .wpgp-nav ul li .wpgp-section-active {
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-content {
+    margin-left: 0;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-theme-light .wpgp-nav-background {
+    display: none;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-nav ul li a {
+    padding: 25px 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-theme-light .wpgp-nav ul li a {
+    background-color: #ffffff;
+    border-bottom: 0;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp-nav .fa {
+    font-size: 15px;
+}
+
+/* Tabs details */
+.wpgp--metabox-options#_wpgp_page_options .wpgp--menu-detail {
+    padding: 15px 30px;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp--menu-detail strong {
+    font-size: 30px;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp--menu-detail p {
+    width: 50%;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp--menu-detail a {
+    margin-left: 30px;
+    background: #02C23C;
+    padding: 6px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    float: right;
+}
+
+/* SHortcode Side Context */
+.wpgp--shortcode-field .wpgp--shortcode-field-wrap {
+    padding: 30px 10px;
+    background: #dc0251;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.wpgp--shortcode-field .wpgp--shortcode-field-wrap code {
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+
+/* Others */
+.wpgp--metabox-options#_wpgp_page_options .wpgp--width-50 .wpgp-fieldset {
+    width: 50%;
+}
+.wpgp--metabox-options#_wpgp_page_options  .wpgp-field-spacing input[type=number]:focus {
+    box-shadow: none;
+    border-color: #7e8993;
+    background-color: #f5f5f5;
+}
+
+/* Transparent placeholder text */
+.wpgp--metabox-options#_wpgp_page_options .wpgp--no-placeholder input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp--no-placeholder input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp--no-placeholder input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: transparent;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp--no-placeholder input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: transparent;
+}
+.wpgp--metabox-options#_wpgp_page_options .wpgp--no-placeholder input::placeholder {
+    color: transparent;
+}
+
+/* Others */
+.wpgp--metabox-options .handle-actions.hide-if-no-js {
+    display: none;
+}
+.wpgp--image-group .wpgp--image:after {
+    position: absolute;
+    bottom: -22px;
+    left: 1px;
+    height: 20px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.wpgp--image-group .wpgp--image:nth-child(1):after {content: "Classic Slider";}
+.wpgp--image-group .wpgp--image:nth-child(2):after {content: "Immersive Carousel";}
+.wpgp--image-group .wpgp--image:nth-child(3):after {content: "Thumbnail Slider";}
