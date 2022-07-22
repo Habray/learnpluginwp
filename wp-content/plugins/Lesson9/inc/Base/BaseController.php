@@ -21,12 +21,3 @@ class BaseController{
 
     }
 }
-
-// only works for require_once
-// define('PLUGIN_PATH', plugin_dir_path( __FILE__ ));
-
-// for our custom sytle
-// define('PLUGIN_URL', plugin_dir_url(__FILE__));
-
-// for basename
-// define('PLUGIN', plugin_basename( __FILE__ ));   
